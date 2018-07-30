@@ -46,6 +46,9 @@
    - ["RDF is a directed, labeled graph data format"](https://www.w3.org/TR/rdf-sparql-query/)
    - SPARQL is canonically pronounced very similarly to `sparklyr`, but they are conceptually very different
    
+### Stats
+ - ["There is still only one test"](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html?m=1), Allen Downey
+   
 ### ML   
 - [Posters](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/README.md) by Avik Jain
 - h2o.ai, [automl](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html), and  [automl example with power plant data](https://github.com/h2oai/h2o-tutorials/blob/master/h2o-world-2017/automl/R/automl_regression_powerplant_output.Rmd )
