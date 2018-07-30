@@ -49,4 +49,8 @@
 ### ML   
 - [Posters](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/README.md) by Avik Jain
 - h2o.ai, [automl](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html), and  [automl example with power plant data](https://github.com/h2oai/h2o-tutorials/blob/master/h2o-world-2017/automl/R/automl_regression_powerplant_output.Rmd )
+- ["Troubling trends in machine learning scholarship"](http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/)
+- Free online classes:
+  - fastai
+  - [Bloomberg ML class](https://bloomberg.github.io/foml/#lectures)
 
