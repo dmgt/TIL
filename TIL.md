@@ -11,13 +11,16 @@
 - [Experimental Design in R](https://www.datacamp.com/courses/experimental-design-in-r), kaelen medeiros, DataCamp
 - [FUNctional programming tricks in httr](https://irene.rbind.io/post/fun-prog-httr/), Irene Steves
 
-#### Markdown <3
+#### Markdown
  
  - [R Markdown: The definitive guide](https://bookdown.org/yihui/rmarkdown/)
  - [Some Lesser Known Features of knitr](https://slides.yihui.name/2018-knitr-RaukR-Yihui-Xie.html#1), Yihui Xie, 2018
  - There is an RStudio add-in called "Infinitive Moon Reader" that [enables](https://slides.yihui.name/2018-knitr-RaukR-Yihui-Xie.html#11) live preview of documents without having to continually knit them 
  - In theory it's possible to use https://yihui.name/tinytex/ instead of MikTeX for future LaTeX installs on Windows, in practice I have yet to do so
  - [Including external source R code](http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/), Zev Ross
+ 
+#### APIs
+- `httr`, and a [tutorial](https://irene.rbind.io/post/fun-prog-httr/) for it by Irene Steves
 
 #### Reproducibility tools in R
 - `workflowr`
