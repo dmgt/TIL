@@ -61,4 +61,7 @@
 - Free online classes:
   - fastai
   - [Bloomberg ML class](https://bloomberg.github.io/foml/#lectures)
+  
+  ### Grants
+  - [Open grants](https://www.ogrants.org/) - includes NSF GRFP examples
 
