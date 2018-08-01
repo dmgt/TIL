@@ -63,7 +63,7 @@
    
 ### Stats
  - ["There is still only one test"](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html?m=1), Allen Downey
- - ["Intro Stats and Intro Data Science - do we need both?"](https://speakerdeck.com/minecr/intro-stats-and-intro-data-science-do-we-need-both?),  Mine Cetinkaya-Rundel (see teaching examples)
+ - ["Intro Stats and Intro Data Science - do we need both?"](https://speakerdeck.com/minecr/intro-stats-and-intro-data-science-do-we-need-both?),  Mine Cetinkaya-Rundel (RStudio and Associate Professor of the Practice in the Department of Statistical Science at Duke University)   - see teaching examples
    
 ### ML   
 - [Posters](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/README.md) by Avik Jain
