@@ -25,6 +25,7 @@
 #### Reproducibility tools in R
 - `workflowr`
 - `drake`
+- ["Happy git with R"](http://happygitwithr.com/)
 
 #### Graphics
  - [Calender graphics with `sugrrants`](https://github.com/earowang/sugrrants/blob/master/README.md)
@@ -73,6 +74,6 @@
   - fastai
   - [Bloomberg ML class](https://bloomberg.github.io/foml/#lectures)
   
-  ### Grants
+ ### Grants
   - [Open grants](https://www.ogrants.org/) - includes NSF GRFP examples
 
