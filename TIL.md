@@ -33,6 +33,11 @@
 - ["R Generation"](https://rss.onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2018.01169.x), Nick Thieme, Sign Magazine
 - ["Teaching R to New Users - From tapply to the Tidyverse"](https://simplystatistics.org/2018/07/12/use-r-keynote-2018/), Roger Peng, UserR! 2018
 
+### Migration guides
+- From Excel to R: http://rpubs.com/acolumbus/how-to-use-r-with-excel  (includes list of common Excel functions in R) 
+- From MatLab to Python: https://www.enthought.com/white-paper-matlab-to-python/ 
+
+
 ### General reproducibility
 - [OSF + Binder Example of the Future](https://osf.io/wr7an/)
 - ["The practice of reproducible research"](https://www.practicereproducibleresearch.org), including [this](https://www.practicereproducibleresearch.org/case-studies/jmMagallanes.html) case study in R
@@ -51,8 +56,14 @@
    - ["RDF is a directed, labeled graph data format"](https://www.w3.org/TR/rdf-sparql-query/)
    - SPARQL is canonically pronounced very similarly to `sparklyr`, but they are conceptually very different
    
+### Teaching
+- [Data Science in a Box](https://rstudio-education.github.io/datascience-box/) - 16-week open source curriculum 
+- [Teaching Tech Together](http://teachtogether.tech/en/) - how people learn, how to design and deliver lessons and grow a community of practice
+
+   
 ### Stats
  - ["There is still only one test"](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html?m=1), Allen Downey
+ - ["Intro Stats and Intro Data Science - do we need both?"](https://speakerdeck.com/minecr/intro-stats-and-intro-data-science-do-we-need-both?),  Mine Cetinkaya-Rundel (see teaching examples)
    
 ### ML   
 - [Posters](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/README.md) by Avik Jain
