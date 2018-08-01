@@ -34,8 +34,10 @@
 - ["Teaching R to New Users - From tapply to the Tidyverse"](https://simplystatistics.org/2018/07/12/use-r-keynote-2018/), Roger Peng, UserR! 2018
 
 ### General reproducibility
+- [OSF + Binder Example of the Future](https://osf.io/wr7an/)
 - ["The practice of reproducible research"](https://www.practicereproducibleresearch.org), including [this](https://www.practicereproducibleresearch.org/case-studies/jmMagallanes.html) case study in R
 - ["The importance of reproducible research in high-throughput biology: case studies in forensic bioinformatics"](https://youtu.be/7gYIs7uYbMo), Keith A Baggerly, 2010
+
 
 #### A few more tools
 - Whole Tale
