@@ -10,6 +10,7 @@
 #### Tutorials
 - [Experimental Design in R](https://www.datacamp.com/courses/experimental-design-in-r), kaelen medeiros, DataCamp
 - [FUNctional programming tricks in httr](https://irene.rbind.io/post/fun-prog-httr/), Irene Steves
+- [Beyond Basic R](https://owi.usgs.gov/blog/intro-best-practices/), USGS R
 
 #### Markdown
  
@@ -21,6 +22,7 @@
  
 #### APIs
 - `httr`, and a [tutorial](https://irene.rbind.io/post/fun-prog-httr/) for it by Irene Steves
+   - Also [Harnessing the Power of the Web via R Clients for Web APIs](https://www.lucymcgowan.com/talk/asa_joint_statistical_meeting_2018/) , Lucy McGowan, ASA 2018
 
 #### Reproducibility tools in R
 - `workflowr`
@@ -38,6 +40,8 @@
 - From Excel to R: http://rpubs.com/acolumbus/how-to-use-r-with-excel  (includes list of common Excel functions in R) 
 - From MatLab to Python: https://www.enthought.com/white-paper-matlab-to-python/ 
 
+### Python
+- [Bicycle control design in python](https://plot.ly/ipython-notebooks/bicycle-control-design/)
 
 ### General reproducibility
 - [OSF + Binder Example of the Future](https://osf.io/wr7an/)
