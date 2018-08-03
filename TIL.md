@@ -1,10 +1,11 @@
 ### R morsels
 
 #### Quick tips
-- `spelling::spell_check_setup()` to check for spelling errors or missing quotes (via [Carl Boettiger on Twitter](https://twitter.com/cboettig/status/1017257307263066112?s=19))
+- `spelling::spell_check_setup()` to check for spelling errors or missing quotes (via [Carl Boettiger](https://twitter.com/cboettig/status/1017257307263066112?s=19))
 - `knitr::write_bib(c("knitr", "shiny"))` will generate the citation for knitr and shiny
 - `glimpse()` or `View()`
 - [skimr](https://github.com/ropensci/skimr) "A frictionless, pipeable approach to dealing with summary statistics"
+- Using `gh` library, can doadload a single file from a public or private GitHub repo (via [Noam Ross](https://twitter.com/noamross/status/1024682912384462848))
 
 
 #### Tutorials
@@ -46,6 +47,7 @@
 
 ### General reproducibility
 - [OSF + Binder Example of the Future](https://osf.io/wr7an/)
+- [Research Compendiums](https://research-compendium.science/)
 - ["The practice of reproducible research"](https://www.practicereproducibleresearch.org), including [this](https://www.practicereproducibleresearch.org/case-studies/jmMagallanes.html) case study in R
 - ["The importance of reproducible research in high-throughput biology: case studies in forensic bioinformatics"](https://youtu.be/7gYIs7uYbMo), Keith A Baggerly, 2010
 
