@@ -1,2 +1,2 @@
 # TIL
-A place to store nifty tips and tricks
+Collecting helpful resources that I learn about or want to share
