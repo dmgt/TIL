@@ -1,3 +1,6 @@
+### Skype a Scientist!
+- https://www.skypeascientist.com/ (for teachers and researchers)
+
 ### R morsels
 
 #### Quick tips
