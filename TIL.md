@@ -9,6 +9,7 @@
 - `glimpse()` or `View()`
 - [skimr](https://github.com/ropensci/skimr) "A frictionless, pipeable approach to dealing with summary statistics"
 - Using `gh` library, can doadload a single file from a public or private GitHub repo (via [Noam Ross](https://twitter.com/noamross/status/1024682912384462848))
+- `rvg` and `officer` to make plots editable in MS Excel or Powerpoint ([example](https://twitter.com/noamross/status/1027280341025939457?s=19))
 
 
 #### Tutorials
@@ -47,6 +48,7 @@
 
 ### Python
 - [Bicycle control design in python](https://plot.ly/ipython-notebooks/bicycle-control-design/)
+- Tests for data in pipelines with [great expectations](https://great-expectations.readthedocs.io/en/latest/intro.html#what-is-great-expectations)
 
 ### General reproducibility
 - [OSF + Binder Example of the Future](https://osf.io/wr7an/)
