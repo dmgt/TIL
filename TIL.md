@@ -50,6 +50,10 @@
 - [Bicycle control design in python](https://plot.ly/ipython-notebooks/bicycle-control-design/)
 - Tests for data in pipelines with [great expectations](https://great-expectations.readthedocs.io/en/latest/intro.html#what-is-great-expectations)
 
+### Version control extras
+- [Anonymous GitHub](https://github.com/tdurieux/anonymous_github/) - "a system to anonymize Github repositories before referring to them in a double-blind paper submission"
+- [Encrypted git](https://keybase.io/blog/encrypted-git-for-everyone#_)
+
 ### General reproducibility
 - [OSF + Binder Example of the Future](https://osf.io/wr7an/)
 - [Research Compendiums](https://research-compendium.science/)
@@ -73,6 +77,9 @@
 - [Data Science in a Box](https://rstudio-education.github.io/datascience-box/) - 16-week open source curriculum 
 - [Teaching Tech Together](http://teachtogether.tech/en/) - how people learn, how to design and deliver lessons and grow a community of practice
 
+ #### Wikipedia in the classroom
+  - Microbiology examples from [Thrash Lab](https://thethrashlab.com/education/)
+
    
 ### Stats
  - ["There is still only one test"](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html?m=1), Allen Downey
@@ -88,4 +95,6 @@
   
  ### Grants
   - [Open grants](https://www.ogrants.org/) - includes NSF GRFP examples
+  
+ 
 
