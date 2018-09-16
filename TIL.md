@@ -69,6 +69,7 @@
 
 ### Databases
  - **SQL** stands for Structured Query Language
+  - [Star Select SQL](https://selectstarsql.com/) - Free online SQL tutorial 
  - **SPARQL** stands for SPARQL Protocol and RDF Query Language
    - ["RDF is a directed, labeled graph data format"](https://www.w3.org/TR/rdf-sparql-query/)
    - SPARQL is canonically pronounced very similarly to `sparklyr`, but they are conceptually very different
