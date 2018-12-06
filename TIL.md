@@ -4,7 +4,7 @@
 ### R morsels
 
 #### Quick tips
-- `spelling::spell_check_setup()` to check for spelling errors or missing quotes (via [Carl Boettiger](https://twitter.com/cboettig/status/1017257307263066112?s=19))
+- [Example](https://gist.github.com/cwickham/93c35206b577b350a57d21ed2e5bcef1) of combining `bind_rows()` with `map()` and `read_csv()`
 - `knitr::write_bib(c("knitr", "shiny"))` will generate the citation for knitr and shiny
 - `glimpse()` or `View()`
 - [skimr](https://github.com/ropensci/skimr) "A frictionless, pipeable approach to dealing with summary statistics"
@@ -66,6 +66,8 @@
 - http://stenci.la/
 - OSF
 
+### Data Visualization
+ - Online book: [Fundamentals of Data vizualization](https://serialmentor.com/dataviz/) - in R, written using bookdown
 
 ### Databases
  - **SQL** stands for Structured Query Language
@@ -78,6 +80,7 @@
 ### Teaching
 - [Data Science in a Box](https://rstudio-education.github.io/datascience-box/) - 16-week open source curriculum 
 - [Teaching Tech Together](http://teachtogether.tech/en/) - how people learn, how to design and deliver lessons and grow a community of practice
+- Preprint: ["Using GitHub classroom to teach statistics"](https://arxiv.org/abs/1811.02021) 
 
  #### Wikipedia in the classroom
   - Microbiology examples from [Thrash Lab](https://thethrashlab.com/education/)
@@ -86,10 +89,12 @@
 ### Stats
  - ["There is still only one test"](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html?m=1), Allen Downey
  - ["Intro Stats and Intro Data Science - do we need both?"](https://speakerdeck.com/minecr/intro-stats-and-intro-data-science-do-we-need-both?),  Mine Cetinkaya-Rundel (RStudio and Associate Professor of the Practice in the Department of Statistical Science at Duke University)   - see teaching examples
+ - ["Statistical re-thinking - a Bayeasian course using R and Stan"](https://github.com/rmcelreath/statrethinking_winter2019/blob/master/README.md)
    
 ### ML   
 - [Posters](https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/README.md) by Avik Jain
 - h2o.ai, [automl](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html), and  [automl example with power plant data](https://github.com/h2oai/h2o-tutorials/blob/master/h2o-world-2017/automl/R/automl_regression_powerplant_output.Rmd )
+- `caret` will still be supported, [`parsnip`](https://www.tidyverse.org/articles/2018/11/parsnip-0-0-1/) is new and part of the tidyverse
 - ["Troubling trends in machine learning scholarship"](http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/)
 - Free online classes:
   - fastai
