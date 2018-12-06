@@ -4,6 +4,7 @@
 ### R morsels
 
 #### Quick tips
+- Use `vtable` to keep quick list of variables in viewer window without constantly repeating `head(0` or `glipmse()` - demo [here](https://threadreaderapp.com/thread/1060256367909326848.html)
 - [Example](https://gist.github.com/cwickham/93c35206b577b350a57d21ed2e5bcef1) of combining `bind_rows()` with `map()` and `read_csv()`
 - `knitr::write_bib(c("knitr", "shiny"))` will generate the citation for knitr and shiny
 - `glimpse()` or `View()`
