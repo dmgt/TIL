@@ -8,7 +8,11 @@
 - [Example](https://gist.github.com/cwickham/93c35206b577b350a57d21ed2e5bcef1) of combining `bind_rows()` with `map()` and `read_csv()`
 - `knitr::write_bib(c("knitr", "shiny"))` will generate the citation for knitr and shiny
 - `glimpse()` or `View()`
-- [skimr](https://github.com/ropensci/skimr) "A frictionless, pipeable approach to dealing with summary statistics"
+- Summary stats beyond `summary()`
+    - [skimr](https://github.com/ropensci/skimr) "A frictionless, pipeable approach to dealing with summary statistics"
+       - Note the in-line histograms don't render well in knitted files, can turn off (or use `summarytools` below)
+    - [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html)
+       - Use `dfSummary()` for summary stats, valid, missing, and a graph for each variable
 - Using `gh` library, can doadload a single file from a public or private GitHub repo (via [Noam Ross](https://twitter.com/noamross/status/1024682912384462848))
 - `rvg` and `officer` to make plots editable in MS Excel or Powerpoint ([example](https://twitter.com/noamross/status/1027280341025939457?s=19))
 
@@ -25,6 +29,7 @@
  - There is an RStudio add-in called "Infinitive Moon Reader" that [enables](https://slides.yihui.name/2018-knitr-RaukR-Yihui-Xie.html#11) live preview of documents without having to continually knit them 
  - In theory it's possible to use https://yihui.name/tinytex/ instead of MikTeX for future LaTeX installs on Windows, in practice I have yet to do so
  - [Including external source R code](http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/), Zev Ross
+ - New! - [knitcitations](https://github.com/cboettig/knitcitations) - "Generate citations for knitr markdown and html files"
  - [Thread on thesis organization](https://twitter.com/CivicAngela/status/1024469727274565633), Angela Li
  
 #### APIs
