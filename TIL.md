@@ -15,6 +15,7 @@
        - Use `dfSummary()` for summary stats, valid, missing, and a graph for each variable
 - Using `gh` library, can doadload a single file from a public or private GitHub repo (via [Noam Ross](https://twitter.com/noamross/status/1024682912384462848))
 - `rvg` and `officer` to make plots editable in MS Excel or Powerpoint ([example](https://twitter.com/noamross/status/1027280341025939457?s=19))
+- `gt` for tables
 
 
 #### Tutorials
@@ -65,6 +66,8 @@
 - [Research Compendiums](https://research-compendium.science/)
 - ["The practice of reproducible research"](https://www.practicereproducibleresearch.org), including [this](https://www.practicereproducibleresearch.org/case-studies/jmMagallanes.html) case study in R
 - ["The importance of reproducible research in high-throughput biology: case studies in forensic bioinformatics"](https://youtu.be/7gYIs7uYbMo), Keith A Baggerly, 2010
+- ["Best practices for using google sheets in your data project"](https://matthewlincoln.net/2018/03/26/best-practices-for-using-google-sheets-in-your-data-project.html)
+- ["Reproducible research practices, transparency, and open access data in the biomedical literature, 2015–2017"](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2006930)
 
 
 #### A few more tools
