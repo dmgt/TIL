@@ -82,7 +82,7 @@ There are two ways to do this:
 
 #### 1. Add more users to an existing instance
 
--   With your Jetstream istnance active, launch the web shell
+-   With your Jetstream instance active, launch the web shell
 -   See the ids of your running Docker container with RStudio by running `docker ps`. You will need to write down or remember the first 5 digits of your CONTAINER ID (a long string of numbers and letters)
 
 -   To run commands inside that container, run
@@ -92,7 +92,7 @@ There are two ways to do this:
     docker exec -ti CONTAINER_ID bash
 ```
 
-Where CONTAINER\_ID is eg "904b2", the first 5 digits
+Where CONTAINER\_ID is eg "904b2", the first 5 digits. Notice your prompt will change now that you are inside the container.
 
 -   Now you can use regular UNIX commands to create a new user (this is not Docker-specific)
 
@@ -100,7 +100,7 @@ Where CONTAINER\_ID is eg "904b2", the first 5 digits
  adduser example_user
 ```
 
-Enter a password, press 'Enter' to leave the other questions blank, they are not required, and press Y for "Yes"
+Enter a password, press 'Enter' to leave the other questions blank (eg Name, Work Phone...), they are not required, and press Y for "Yes"
 
 -   At this point, someone could go to the same URL you set up above, and login with this new username and password but they wouldn't be able to install packages (no root access)
 
@@ -108,6 +108,32 @@ Enter a password, press 'Enter' to leave the other questions blank, they are not
 
 ``` bash
  usermod -aG staff example_user
+```
+
+To see a list of all the users (this includes some other system info) as well
+
+``` bash
+cat /etc/passwd
+```
+
+To change a password (note `passwd` below is not a typo)
+
+``` bash
+sudo passwd example_username
+```
+
+When you are done configuring the user info, type
+
+``` bash
+exit
+```
+
+to return to the command line outside of that container.
+
+And the login url for the new users same as above, at:
+
+``` bash
+echo My RStudio Web server is running at: http://$(hostname):8787/
 ```
 
 #### 2. Launch a separate R Studio instance bound to a different port
