@@ -34,16 +34,22 @@ If you get an error about permission denied and docker daemon, try adding yourse
 -   Start a new Docker container that has R, R Studio, and the `tidyverse` preinstalled (you could also install these and all the required dependencies without Docker but it takes a long time and is potentially error-prone)
 
     ``` bash
-    docker run -d -p 8787:8787 -rm -e PASSWORD=example_password rocker/tidyverse
+    docker run -d -p 8787:8787 --rm -e PASSWORD=example_password rocker/tidyverse
     ```
 
-    -   *What do all those flags mean?*
+or, if in addition you also want TeX installed and tools for publishing, use the larger `verse` image:
 
-        -   "-d" for *detach* means the container will run 'in the background' , and return a command prompt (without this flag your container will be running but you won't be able to run anything else at the command prompt until the container is stopped)
-        -   "-p" for *port* is a port and also the suffix for the url your RStudio session will be accesible at
-        -   "-e" for *environment* is passing the `PASSWORD` variable to the created computational environment
-        -   "-rm" for *remove* , which will automatically delete this container after it exits (note it does not delete the underlying image the container was based on)
-        -   `rocker/tidyverse` - this specifies the exact Docker image (already created by the Rocker project) to use. Using the same image, you can set up the exact same computational environment many differnet times, or many different people can all use it to set up the same environment - More details about this image at <https://www.rocker-project.org/images/>
+    ```bash
+    docker run -d -p 8787:8787 --rm -e PASSWORD=example_password rocker/verse
+    ```
+
+-   *What do all those flags mean?*
+
+    -   "-d" for *detach* means the container will run 'in the background' , and return a command prompt (without this flag your container will be running but you won't be able to run anything else at the command prompt until the container is stopped)
+    -   "-p" for *port* is a port and also the suffix for the url your RStudio session will be accesible at
+    -   "-e" for *environment* is passing the `PASSWORD` variable to the created computational environment
+    -   "--rm" for *remove* , which will automatically delete this container after it exits (note it does not delete the underlying image the container was based on)
+    -   `rocker/tidyverse` - this specifies the exact Docker image (already created by the Rocker project) to use. Using the same image, you can set up the exact same computational environment many differnet times, or many different people can all use it to set up the same environment - More details about this image at <https://www.rocker-project.org/images/>
 
 -   To find the URL you can use to log into the new R Studio session, run
 
