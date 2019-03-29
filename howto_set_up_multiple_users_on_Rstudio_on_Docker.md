@@ -33,15 +33,15 @@ If you get an error about permission denied and docker daemon, try adding yourse
 
 -   Start a new Docker container that has R, R Studio, and the `tidyverse` preinstalled (you could also install these and all the required dependencies without Docker but it takes a long time and is potentially error-prone)
 
-    ``` bash
+``` bash
     docker run -d -p 8787:8787 --rm -e PASSWORD=example_password rocker/tidyverse
-    ```
+```
 
 or, if in addition you also want TeX installed and tools for publishing, use the larger `verse` image:
 
-    ```bash
+``` bash
     docker run -d -p 8787:8787 --rm -e PASSWORD=example_password rocker/verse
-    ```
+```
 
 -   *What do all those flags mean?*
 
@@ -57,7 +57,9 @@ or, if in addition you also want TeX installed and tools for publishing, use the
     echo My RStudio Web server is running at: http://$(hostname):8787/
     ```
 
-Note the URL above is *http* not *https*, the latter is also possible to set up but requires a custom domain name Note to copy and paste text from the Jetstream web shell, you have you highlight it and then press Ctrl + Alt + Shift
+Note the URL above is *http* not *https*, the latter is also possible to set up but requires a custom domain name
+
+Note to copy and paste text from the Jetstream web shell, you have you highlight it and then press Ctrl + Alt + Shift
 
 -   Paste the URL above into your web browser, and to login:
 
