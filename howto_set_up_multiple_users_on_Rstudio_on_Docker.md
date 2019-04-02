@@ -138,19 +138,14 @@ sudo passwd example_username
 
 - Only if acess to install command line programs is required
 - Requires `docker run` command to have already been run with `-e ROOT=true` (see above), then you additionally have to add the user to `sudoers`
-- For more help, see instructions online eg 'Ubuntu add new user to sudo', eg [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) are instructiosn for how to test this from the terminal with `su`
 
 ```bash
 adduser example_username sudo
 ```
 
-
-When you are done configuring the user info, type
-
 ``` bash
 exit
 ```
-
 to return to the command line outside of that container.
 
 And the login url for the new users same as above, at:
@@ -158,6 +153,9 @@ And the login url for the new users same as above, at:
 ``` bash
 echo My RStudio Web server is running at: http://$(hostname):8787/
 ```
+
+- Related Rocker Github issue [here](https://github.com/rocker-org/rocker/issues/206)
+- For more help, see instructions online eg 'Ubuntu add new user to sudo', eg [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) are instructiosn for how to test this from the terminal with `su`
 
 #### 2. Launch a separate R Studio instance bound to a different port
 
