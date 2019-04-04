@@ -5,11 +5,11 @@ March 28, 2019
 
 - [One way of setting up Rstudio and R](#one-way-of-setting-up-rstudio-and-r)
 - [Adding multiple users and configuring their permissions](#adding-multiple-users-and-configuring-their-permissions)
-    - [1. Add more users to an existing instance](#add-more-users-to-an-existing-instance)
+    - [1. Add more users to an existing instance](#1-add-more-users-to-an-existing-instance)
        - [Create new users](#create-new-users)
        - [Enable downloading RStudio packages](#enable-downloading-rstudio-packages)
        - [Enable `sudo` in terminal](#enable-sudo-in-terminal)
-    - [2. Launch a separate R Studio instance bound to a different port](#launch-a-separate-r-studio-instance-bound-to-a-different-port)
+    - [2. Launch a separate R Studio instance bound to a different port](#2-launch-a-separate-r-studio-instance-bound-to-a-different-port)
 - [Installing `curl`, `pip3` and `aws cli` on a fresh `verse` image](#installing-curl-pip3-and-aws-cli-on-a-fresh-verse-image)  
 - [Reference docs](#reference-docs)
 
@@ -33,7 +33,7 @@ If you already have a Jetstream login and allocation, to run R Studio on Jetstre
 
 If configured correctly, this will say `Hello from Docker!...`
 
-If you get an error about permission denied and docker daemon, try adding yourself to root privileges with `sudo usermod -aG docker example_username`, where `example_username` is your username, and then close and re-open the web shell so your new permissions take effect. Alternatively, you can run all the `docker ...` commands prefaced with `sudo`.  
+If you get an error about permission denied and docker daemon, try adding yourself to root privileges with `sudo usermod -aG docker example_username`, where `example_username` is your username, and then close and re-open the web shell so your new permissions take effect. Alternatively, you can run all the `docker ...` commands prefaced with `sudo`.  See specific Docker on Linux docs [here](https://docs.docker.com/install/linux/linux-postinstall/) for more background. 
 
 -   Start a new Docker container that has R, R Studio, and the `tidyverse` preinstalled (you could also install these and all the required dependencies without Docker but it takes a long time and is potentially error-prone)
 
