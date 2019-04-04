@@ -33,7 +33,7 @@ If you already have a Jetstream login and allocation, to run R Studio on Jetstre
 
 If configured correctly, this will say `Hello from Docker!...`
 
-If you get an error about permission denied and docker daemon, try adding yourself to root privileges with `sudo usermod -aG docker example_username`, where `example_username` is your username
+If you get an error about permission denied and docker daemon, try adding yourself to root privileges with `sudo usermod -aG docker example_username`, where `example_username` is your username, and then close and re-open the web shell so your new permissions take effect. Alternatively, you can run all the `docker ...` commands prefaced with `sudo`.  
 
 -   Start a new Docker container that has R, R Studio, and the `tidyverse` preinstalled (you could also install these and all the required dependencies without Docker but it takes a long time and is potentially error-prone)
 
