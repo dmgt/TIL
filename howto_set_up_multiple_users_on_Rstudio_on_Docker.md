@@ -13,7 +13,7 @@ March 28, 2019
 - [Installing `curl`, `pip3` and `aws cli` on a fresh `verse` image](#installing-curl-pip3-and-aws-cli-on-a-fresh-verse-image)  
 - [Reference docs](#reference-docs)
 
-*With thanks to the [Rocker Project](https://www.rocker-project.org/) for R on Docker, Indiana University and the National Science Foundation for cloud compute resources through [Jetstream](https://jetstream-cloud.org/), [DIBSCI](http://ivory.idyll.org/dibsi/2018/WHO.html) at UC Davis for documentation, and Carl Boettiger at UC Berkeley for reproducible research inspiration and an initial version of these instructions*
+*With thanks to the [Rocker Project](https://www.rocker-project.org/) for R on Docker, Indiana University and the National Science Foundation for cloud compute resources through [Jetstream](https://jetstream-cloud.org/), [DIBSCI](http://ivory.idyll.org/dibsi/2018/WHO.html) at UC Davis for documentation, and Carl Boettiger at UC Berkeley for reproducible research inspiration and an initial version of these instructions. All remaining errors are mine, and suggestions to improve these notes are welcome* 
 
 [Jetstream](https://jetstream-cloud.org/) is an NSF-supported cloud compute resource that runs on the open-source software Atmosphere and OpenStack.
 
