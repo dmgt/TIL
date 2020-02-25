@@ -2,7 +2,7 @@ Instructions for setting up RStudio running in a Docker container on
 Jetstream or Digital Ocean, including multiple user logins
 ================
 Dana Miller
-Febuary 24, 2020
+February 24, 2020
 
   - [Background - two cloud compute providers referenced in this
     guide](#background---two-cloud-compute-providers-referenced-in-this-guide)
@@ -24,9 +24,14 @@ Febuary 24, 2020
     running](#optional-next-steps---installing-curl-pip3-and-aws-cli-in-the-terminal-after-rstudio-is-running)
   - [Optional next steps - installing most R
     packages](#optional-next-steps---installing-most-r-packages)
-  - [Optional next steps - installing `sparklyr` (required reinstalling
-    Java 😱
-    )](#optional-next-steps---installing-sparklyr-required-reinstalling-java)
+      - [Packages on CRAN (most R packages you’ll
+        need)](#packages-on-cran-most-r-packages-youll-need)
+      - [Packages on GitHub](#packages-on-github)
+  - [Optional next steps - installing `sparklyr` and `spark` (required
+    reinstalling Java 😱
+    )](#optional-next-steps---installing-sparklyr-and-spark-required-reinstalling-java)
+      - [Context - why is this
+        necessary?](#context---why-is-this-necessary)
   - [Reference docs](#reference-docs)
 
 *With thanks to the [Rocker Project](https://www.rocker-project.org/)
@@ -42,7 +47,7 @@ research inspiration and an initial version of these instructions*
   - [Jetstream](https://jetstream-cloud.org/) is an National Science
     Foundation supported cloud compute resource that runs on the
     open-source software Atmosphere and OpenStack. Compute credit
-    allocations are avalible by applying through XCSEDE. If you can
+    allocations are available by applying through XCSEDE. If you can
     contact campus research computing staff, they may be able to provide
     advice and example applications (eg at UC Berkeley this is the
     [Research
@@ -51,7 +56,7 @@ research inspiration and an initial version of these instructions*
 
 \-[Digital Ocean](https://www.digitalocean.com/) is a commercial cloud
 compute resource (similar to AWS or Azure) offering similar instances to
-those avalible on Jetstream. Compute credits are billed hourly,
+those available on Jetstream. Compute credits are billed hourly,
 depending on the size of the resource.
 
 Running RStudio in Docker and configuring multiple user logins works on
@@ -82,7 +87,7 @@ Jetstream:
     Docker image (click ‘create Droplet’)
   - Recommend setting up SSH authentication
   - Once the droplet is set up, connect to the droplet’s shell interface
-    by opening a terminal and connecting vis ssh with
+    by opening a terminal and connecting via ssh with
 
 <!-- end list -->
 
@@ -125,10 +130,10 @@ use the larger `verse` image:
 <!-- end list -->
 
     - "-d" for *detach* means the container will run 'in the background' , and return a command prompt (without this flag your container will be running but you won't be able to run anything else at the command prompt until the container is stopped)
-    - "-p" for *port* is a port and also the suffix for the url your RStudio session will be accesible at
+    - "-p" for *port* is a port and also the suffix for the URL your RStudio session will be accessible at
     - "-e" for *environment* is passing the `PASSWORD` variable to the created computational environment
     - "--rm" for *remove* , which will automatically delete this container after it exits (note it does not delete the underlying image the container was based on)
-    - `rocker/tidyverse` - this specifies the exact Docker image (already created by the Rocker project) to use. Using the same image, you can set up the exact same computational environment many differnet times, or many different people can all use it to set up the same environment
+    - `rocker/tidyverse` - this specifies the exact Docker image (already created by the Rocker project) to use. Using the same image, you can set up the exact same computational environment many different times, or many different people can all use it to set up the same environment
                 - More details about this image at [https://www.rocker-project.org/images/](https://www.rocker-project.org/images/)
 
   - To find the URL you can use to log into the new R Studio session,
@@ -175,7 +180,7 @@ pane.
 ```
 
 Note that for the user email, you can either use your own email, or use
-the ‘noreply’ email generated for you by github to avoid exposing your
+the ‘noreply’ email generated for you by GitHub to avoid exposing your
 personal email address in your commit history. See
 [here](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
 for details.
@@ -254,7 +259,7 @@ exit
 
 to return to the command line outside of that container.
 
-And the login url for the new users same as above, at:
+And the login URL for the new users same as above, at:
 
 ``` bash
 echo My RStudio Web server is running at: http://$(hostname):8787/
@@ -335,7 +340,60 @@ Continue to follow instructions
 
 ### Optional next steps - installing most R packages
 
-### Optional next steps - installing `sparklyr` (required reinstalling Java 😱 )
+#### Packages on CRAN (most R packages you’ll need)
+
+  - The `verse` image has the `tidyverse` packages preinstalled, which
+    you can see with
+
+<!-- end list -->
+
+``` r
+library(tidyverse)
+```
+
+  - Most additional R packages can be installed as usual from CRAN in
+    the R console, eg with
+
+<!-- end list -->
+
+``` r
+install.packages('skimr')  # skimr is the name of the package
+                           # package names must be in quotes
+```
+
+  - Packages we commonly install that are not pre-installed in the
+    `verse` Docker image include: `skimr`, `cowplot`, `here`, and
+    `janitor`
+
+#### Packages on GitHub
+
+  - If you encounter a package that is not available on CRAN, eg
+    [`aws.s3`](https://github.com/cloudyr/aws.s3) from the
+    [`cloudyr`](https://cloudyr.github.io/) project (which as of this
+    writing was [removed from
+    CRAN](https://twitter.com/thosjleeper/status/1216426950413234177) in
+    January 2019 for lack of an ongoing maintainer ), 1) An archive may
+    be available from CRAN (check the package’s old CRAN page), 2) It is
+    probably available on GitHub.
+
+  - To install `aws.s3` from GitHub, run (and can see more detailed
+    instructions [here](https://github.com/cloudyr/aws.s3))
+
+<!-- end list -->
+
+    install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat"))
+
+### Optional next steps - installing `sparklyr` and `spark` (required reinstalling Java 😱 )
+
+First, install `sparklyr`, and use it to install spark
+
+``` r
+install.packages(`sparklyr`)
+
+sparklyr::spark_install()
+```
+
+#### Context - why is this necessary?
 
 ### Reference docs
 
