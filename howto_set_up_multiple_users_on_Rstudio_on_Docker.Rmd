@@ -1,7 +1,6 @@
 ---
 title: "Instructions for setting up RStudio running in a Docker container on Jetstream or Digital Ocean, including multiple user logins"
 author: "Dana Miller"
-date: "February 24, 2020"
 output:
   github_document:
     toc: true
@@ -12,9 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+*Last updated Febuary 24, 2020 - suggestions to improve these instructions welcome*
 
 *With thanks to the [Rocker Project](https://www.rocker-project.org/) for R on Docker, Indiana University and the National Science Foundation for cloud compute resources through [Jetstream](https://jetstream-cloud.org/), [DIBSCI](http://ivory.idyll.org/dibsi/2018/WHO.html) at UC Davis for documentation, and Carl Boettiger at UC Berkeley for reproducible research inspiration and an initial version of these instructions*
-
 
 ### Background - two cloud compute providers referenced in this guide
 - [Jetstream](https://jetstream-cloud.org/) is an National Science Foundation supported cloud compute resource that runs on the open-source software Atmosphere and OpenStack. Compute credit allocations are available by applying through XCSEDE. If you can contact campus research computing staff, they may be able to provide advice and example applications (eg at UC Berkeley this is the [Research Computing](https://research-it.berkeley.edu/programs/berkeley-research-computing) group)  

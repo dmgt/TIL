@@ -2,7 +2,6 @@ Instructions for setting up RStudio running in a Docker container on
 Jetstream or Digital Ocean, including multiple user logins
 ================
 Dana Miller
-February 24, 2020
 
   - [Background - two cloud compute providers referenced in this
     guide](#background---two-cloud-compute-providers-referenced-in-this-guide)
@@ -36,6 +35,9 @@ February 24, 2020
       - [Installing OpenJDK Java 8 on Debian
         10](#installing-openjdk-java-8-on-debian-10)
   - [More references](#more-references)
+
+*Last updated Febuary 24, 2020 - suggestions to improve these
+instructions welcome*
 
 *With thanks to the [Rocker Project](https://www.rocker-project.org/)
 for R on Docker, Indiana University and the National Science Foundation
