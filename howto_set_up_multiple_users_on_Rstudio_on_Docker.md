@@ -28,11 +28,14 @@ February 24, 2020
         need)](#packages-on-cran-most-r-packages-youll-need)
       - [Packages on GitHub](#packages-on-github)
   - [Optional next steps - installing `sparklyr` and `spark` (required
-    reinstalling Java 😱
-    )](#optional-next-steps---installing-sparklyr-and-spark-required-reinstalling-java)
-      - [Context - why is this
-        necessary?](#context---why-is-this-necessary)
-  - [Reference docs](#reference-docs)
+    reinstalling Java 😱, but you can do it 💪
+    )](#optional-next-steps---installing-sparklyr-and-spark-required-reinstalling-java-but-you-can-do-it)
+      - [Context - what is the problem with Java 8 vs Java
+        11?](#context---what-is-the-problem-with-java-8-vs-java-11)
+      - [Removing OpenJDK Java 11](#removing-openjdk-java-11)
+      - [Installing OpenJDK Java 8 on Debian
+        10](#installing-openjdk-java-8-on-debian-10)
+  - [More references](#more-references)
 
 *With thanks to the [Rocker Project](https://www.rocker-project.org/)
 for R on Docker, Indiana University and the National Science Foundation
@@ -125,16 +128,29 @@ use the larger `verse` image:
     docker run -d -p 8787:8787 --rm -e PASSWORD=example_password rocker/verse
 ```
 
-  - *What do all those flags mean?*
+*What do all those flags mean?*
 
-<!-- end list -->
+  - “-d” for *detach* means the container will run ‘in the background’ ,
+    and return a command prompt (without this flag your container will
+    be running but you won’t be able to run anything else at the command
+    prompt until the container is stopped)
 
-    - "-d" for *detach* means the container will run 'in the background' , and return a command prompt (without this flag your container will be running but you won't be able to run anything else at the command prompt until the container is stopped)
-    - "-p" for *port* is a port and also the suffix for the URL your RStudio session will be accessible at
-    - "-e" for *environment* is passing the `PASSWORD` variable to the created computational environment
-    - "--rm" for *remove* , which will automatically delete this container after it exits (note it does not delete the underlying image the container was based on)
-    - `rocker/tidyverse` - this specifies the exact Docker image (already created by the Rocker project) to use. Using the same image, you can set up the exact same computational environment many different times, or many different people can all use it to set up the same environment
-                - More details about this image at [https://www.rocker-project.org/images/](https://www.rocker-project.org/images/)
+  - “-p” for *port* is a port and also the suffix for the URL your
+    RStudio session will be accessible at
+
+  - “-e” for *environment* is passing the `PASSWORD` variable to the
+    created computational environment
+
+  - “–rm” for *remove* , which will automatically delete this container
+    after it exits (note it does not delete the underlying image the
+    container was based on)
+
+  - `rocker/tidyverse` - this specifies the exact Docker image (already
+    created by the Rocker project) to use. Using the same image, you can
+    set up the exact same computational environment many different
+    times, or many different people can all use it to set up the same
+    environment - More details about this image at
+    <https://www.rocker-project.org/images/>
 
   - To find the URL you can use to log into the new R Studio session,
     run
@@ -383,7 +399,7 @@ install.packages('skimr')  # skimr is the name of the package
 
     install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat"))
 
-### Optional next steps - installing `sparklyr` and `spark` (required reinstalling Java 😱 )
+### Optional next steps - installing `sparklyr` and `spark` (required reinstalling Java 😱, but you can do it 💪 )
 
 First, install `sparklyr`, and use it to install spark
 
@@ -393,9 +409,108 @@ install.packages(`sparklyr`)
 sparklyr::spark_install()
 ```
 
-#### Context - why is this necessary?
+If you try and create a spark connection and get an error about
+installing Java 8, see below
 
-### Reference docs
+#### Context - what is the problem with Java 8 vs Java 11?
+
+  - As documented by other sparklyr users
+    [here](https://github.com/uc-cfss/Discussion/issues/71), and the
+    [‘Mastering Spark in R’](https://therinspark.com) book
+    [here](https://therinspark.com/starting.html), `sparklyr` requires
+    the Java Runtime Environment, version Java 8.
+  - However, the Docker container from the Rocker project that we just
+    set up RStudio in comes with a different version, Java 11.
+    Specifically, the container is using the Debian version of the
+    Linux, and (as of this writing) the current version of Debian,
+    Debian 10, comes with OpenJDK version 11, which is an open-source
+    version of the Java Runtime Environment.
+  - Note this does mean that even though your Jetstream or Digital Ocean
+    instance is running the Ubuntu version of Linux, the RStudio session
+    running *inside the Docker container* is running in the Debian
+    version of Linux. Installing software on Debian and Ubuntu can be
+    different via the command line, so make sure to specify the version
+    of Linux when you are searching for installation help.
+
+You can check your java version in the terminal with:
+
+    java -version
+
+The steps below follow the steps suggested in the [‘Java errors with
+sparklyr?’](https://github.com/uc-cfss/Discussion/issues/71) issue
+linked above
+
+#### Removing OpenJDK Java 11
+
+  - [Here](https://java.com/en/download/help/linux_uninstall.xml) are
+    the official Java instructions on uninstalling Java on Linux
+  - The Docker container appeared not to have an RPM install, after
+    searching for the java install location with `which java` I removed
+    it with
+
+<!-- end list -->
+
+    sudo rm -r /usr/lib/jvm/java-11-openjdk-amd64
+
+and confirmed java was uninstalled with
+
+    java -version
+
+#### Installing OpenJDK Java 8 on Debian 10
+
+  - Unfortunately, this will not work, since
+    [apparently](https://serverfault.com/questions/974992/why-isnt-there-a-openjdk-8-jdk-package-on-debian-anymore)
+    it’s not available by default for Debian 10
+
+<!-- end list -->
+
+    # Seems like it might work, but will not
+    apt-get install openjdk-8-jdk
+
+  - Fortunately, there is an alternative. I followed instructions from
+    AdoptOpenDK [here](https://adoptopenjdk.net/installation.html#) for
+    installing OpenJDK on Debian here (specifically the “DEB
+    installation on Debian or Ubuntu”)
+
+  - Per the messages from following those instructions, first I needed
+    to install `gnupg2`, which is “a complete and free implementation of
+    the OpenPGP standard” ([link](https://gnupg.org/) to project), which
+    is needed for the step where you get the GPG key below
+
+<!-- end list -->
+
+    sudo apt-get install gnupg2
+
+  - Then could follow these steps from the instructions above
+
+<!-- end list -->
+
+    # Get AdoptOpenJDK GPG key 
+    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+    
+    #  Import AdoptOpenJDK DEB repository
+    sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+    
+    #refresh package list
+    apt-get update
+    
+    #install
+    apt-get install adoptopenjdk-8-hotspot
+
+Check your java version again:
+
+    java -version
+
+Now it should say `openjdk version 1.8`, eg
+
+    openjdk version "1.8.0_242"
+    OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_242-b08)
+    OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.242-b08, mixed mode)
+
+Now 1) Restart your R session 2) Try re-running `config <-
+spark_config()` - hopefully this resolves the issue for you too 🎉
+
+### More references
 
   - DIBSCI docs on [setting up a Jetstream
     instance](https://angus.readthedocs.io/en/2018/jetstream/boot.html)
