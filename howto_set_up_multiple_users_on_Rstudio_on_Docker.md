@@ -59,7 +59,7 @@ research inspiration and an initial version of these instructions*
     Computing](https://research-it.berkeley.edu/programs/berkeley-research-computing)
     group)
 
-\-[Digital Ocean](https://www.digitalocean.com/) is a commercial cloud
+- [Digital Ocean](https://www.digitalocean.com/) is a commercial cloud
 compute resource (similar to AWS or Azure) offering similar instances to
 those available on Jetstream. Compute credits are billed hourly,
 depending on the size of the resource.
