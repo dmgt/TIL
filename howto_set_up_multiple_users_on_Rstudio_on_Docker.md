@@ -26,14 +26,14 @@ Dana Miller
       - [Packages on CRAN (most R packages you’ll
         need)](#packages-on-cran-most-r-packages-youll-need)
       - [Packages on GitHub](#packages-on-github)
-  - [Optional next steps - installing `sparklyr` and `spark` (required
-    reinstalling Java 😱, but you can do it 💪
-    )](#optional-next-steps---installing-sparklyr-and-spark-required-reinstalling-java-but-you-can-do-it)
-      - [Context - what is the problem with Java 8 vs Java
-        11?](#context---what-is-the-problem-with-java-8-vs-java-11)
-      - [Removing OpenJDK Java 11](#removing-openjdk-java-11)
-      - [Installing OpenJDK Java 8 on Debian
-        10](#installing-openjdk-java-8-on-debian-10)
+  - [Optional next steps - installing `sparklyr` and
+    `spark`](#optional-next-steps---installing-sparklyr-and-spark)
+      - [If you need to troubleshoot Java 8 vs Java 11 (requires
+        reinstalling Java 😱, but you can do it 💪
+        )](#if-you-need-to-troubleshoot-java-8-vs-java-11-requires-reinstalling-java-but-you-can-do-it)
+          - [Removing OpenJDK Java 11](#removing-openjdk-java-11)
+          - [Installing OpenJDK Java 8 on Debian
+            10](#installing-openjdk-java-8-on-debian-10)
   - [More references](#more-references)
 
 *Last updated Febuary 24, 2020 - suggestions to improve these
@@ -401,7 +401,7 @@ install.packages('skimr')  # skimr is the name of the package
 
     install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat"))
 
-### Optional next steps - installing `sparklyr` and `spark` (required reinstalling Java 😱, but you can do it 💪 )
+### Optional next steps - installing `sparklyr` and `spark`
 
 First, install `sparklyr`, and use it to install spark
 
@@ -411,10 +411,10 @@ install.packages(`sparklyr`)
 sparklyr::spark_install()
 ```
 
-If you try and create a spark connection and get an error about
-installing Java 8, see below
+If this works, great\! If you try and create a spark connection and get
+an error about installing Java 8, see below
 
-#### Context - what is the problem with Java 8 vs Java 11?
+#### If you need to troubleshoot Java 8 vs Java 11 (requires reinstalling Java 😱, but you can do it 💪 )
 
   - As documented by other sparklyr users
     [here](https://github.com/uc-cfss/Discussion/issues/71), and the
@@ -442,7 +442,7 @@ The steps below follow the steps suggested in the [‘Java errors with
 sparklyr?’](https://github.com/uc-cfss/Discussion/issues/71) issue
 linked above
 
-#### Removing OpenJDK Java 11
+##### Removing OpenJDK Java 11
 
   - [Here](https://java.com/en/download/help/linux_uninstall.xml) are
     the official Java instructions on uninstalling Java on Linux
@@ -458,7 +458,7 @@ and confirmed java was uninstalled with
 
     java -version
 
-#### Installing OpenJDK Java 8 on Debian 10
+##### Installing OpenJDK Java 8 on Debian 10
 
   - Unfortunately, this will not work, since
     [apparently](https://serverfault.com/questions/974992/why-isnt-there-a-openjdk-8-jdk-package-on-debian-anymore)

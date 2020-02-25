@@ -257,7 +257,7 @@ install.packages('skimr')  # skimr is the name of the package
 install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat"))
 ```
 
-### Optional next steps - installing `sparklyr` and `spark` (required reinstalling Java 😱, but you can do it 💪 )
+### Optional next steps - installing `sparklyr` and `spark` 
 
 First, install `sparklyr`, and use it to install spark
 ```{r, eval = F}
@@ -266,9 +266,9 @@ install.packages(`sparklyr`)
 sparklyr::spark_install()
 ```
 
-If you try and create a spark connection and get an error about installing Java 8, see below
+If this works, great! If you try and create a spark connection and get an error about installing Java 8, see below
 
-#### Context - what is the problem with Java 8 vs Java 11?
+#### If you need to troubleshoot Java 8 vs Java 11 (requires reinstalling Java 😱, but you can do it 💪 )
 
 - As documented by other sparklyr users [here](https://github.com/uc-cfss/Discussion/issues/71), and the ['Mastering Spark in R'](https://therinspark.com) book [here](https://therinspark.com/starting.html), `sparklyr` requires the Java Runtime Environment, version Java 8. 
 - However, the Docker container from the Rocker project that we just set up RStudio in comes with a different version, Java 11. Specifically, the container is using the Debian version of the Linux, and (as of this writing) the current version of Debian, Debian 10, comes with OpenJDK version 11, which is an open-source version of the Java Runtime Environment. 
@@ -282,7 +282,7 @@ java -version
 
 The steps below follow the steps suggested in the ['Java errors with sparklyr?'](https://github.com/uc-cfss/Discussion/issues/71) issue linked above
 
-#### Removing OpenJDK Java 11
+##### Removing OpenJDK Java 11
 
 - [Here](https://java.com/en/download/help/linux_uninstall.xml) are the official Java instructions on uninstalling Java on Linux
 - The Docker container appeared not to have an RPM install, after searching for the java install location  with `which java` I removed it with 
@@ -298,7 +298,7 @@ and confirmed java was uninstalled with
 java -version
 ```
 
-#### Installing OpenJDK Java 8 on Debian 10
+##### Installing OpenJDK Java 8 on Debian 10
 
 - Unfortunately, this will not work, since [apparently](https://serverfault.com/questions/974992/why-isnt-there-a-openjdk-8-jdk-package-on-debian-anymore) it's not available by default for Debian 10
 ```
