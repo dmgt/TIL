@@ -17,6 +17,13 @@
 
 UC Berkeley community note: There are also in-person workshops on campus organized by the [D-Lab](https://dlab.berkeley.edu/) that are free and also introduce some of this material.
 
+4. As you learn more, there are many resources from the large and welcoming R community on practically any topic you can think of! Some examples to get started:
+   - Alison Horst's [#rstats art](https://github.com/allisonhorst/stats-illustrations) 
+   - [TidyTuesday](https://github.com/rfordatascience/tidytuesday) for data vizualization (also very active on Twitter, #TidyTuesday)
+   - [RLadies](https://rladies.org/) - global and local meetups groups, now offering many resources online
+   - [Tidy modeling with R](https://www.tidymodels.org/)
+   - Sports analytics fan? Check out the R community in [https://hockey-graphs.com/](https://hockey-graphs.com/)
+
 ## Additional resources for reference:
 
 Free and aimed at beginners - these are self-paced, written lessons that require setting up R and Rstudio yourself (they're not in browser like the dataquest ones above), but they are exactly focused on key skills for researchers
