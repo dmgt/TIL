@@ -1,6 +1,4 @@
-*A summary of resources for getting started with R at UC Berkeley in 2019*
-
-Note there are free in-person workshops on campus organized by the [D-Lab](https://dlab.berkeley.edu/) that are free and also introduce some of this material.
+*A summary of resources for getting started with R*
 
 ## Getting started
 1. The first step is to install both R and RStudio:
@@ -16,6 +14,8 @@ Note there are free in-person workshops on campus organized by the [D-Lab](https
 - Later sections cost $ but once you get started many of the best resources are free, so I don't think you neccesarily need to pay for a subscription beyond Dataquest's 4 free R courses: https://www.dataquest.io/path/data-analyst-r/
 
 3. Third, see this popular free online book is a reference and further information on the R `tidyverse` world for data analysis: https://r4ds.had.co.nz/ (collegues and I learned from this book and I refer to it often)
+
+UC Berkeley community note: There are also in-person workshops on campus organized by the [D-Lab](https://dlab.berkeley.edu/) that are free and also introduce some of this material.
 
 ## Additional resources for reference:
 
